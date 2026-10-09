@@ -1,0 +1,228 @@
+{
+ "count": 17,
+ "format": "160x160 RGBA PNG, circular alpha, badge background normalised to white",
+ "order_note": "order_clockwise_from_top: 1 = Coldy, which is at the top of the ring at t~22.5s; order increases clockwise on screen (top -> right -> bottom -> left). Ring physically rotates COUNTER-clockwise on screen, so at the bottom the badges slide left->right in the order 17,16,...,1 i.e. Whitewill(12) -> A101(11) -> Bolshevik(10) -> Zorge(9) -> Game(8) -> Horseka(7) -> ShowMe(6) -> M(5) -> crest(4) -> T5(3) -> a.properties(2) -> Coldy(1) -> ERA(17) -> Ingrad(16)... wraps around.",
+ "logos": [
+  {
+   "file": "l01.png",
+   "name": "Coldy",
+   "source_frame_10fps": 273,
+   "source_time_s": 27.2,
+   "src_center_px": [
+    383.7,
+    60.5
+   ],
+   "src_radius_px": 54.9,
+   "src_bg_gray_before_norm": 201,
+   "order_clockwise_from_top": 1
+  },
+  {
+   "file": "l02.png",
+   "name": "a.properties",
+   "source_frame_10fps": 211,
+   "source_time_s": 21.0,
+   "src_center_px": [
+    1087.7,
+    621.6
+   ],
+   "src_radius_px": 51.1,
+   "src_bg_gray_before_norm": 139,
+   "order_clockwise_from_top": 2
+  },
+  {
+   "file": "l03.png",
+   "name": "T5 monogram (T/5 emblem)",
+   "source_frame_10fps": 213,
+   "source_time_s": 21.2,
+   "src_center_px": [
+    1067.5,
+    632.4
+   ],
+   "src_radius_px": 53.1,
+   "src_bg_gray_before_norm": 171,
+   "order_clockwise_from_top": 3
+  },
+  {
+   "file": "l04.png",
+   "name": "Khamovniki crest (lion on shield, \"17\"-like)",
+   "source_frame_10fps": 215,
+   "source_time_s": 21.4,
+   "src_center_px": [
+    1030.4,
+    639.9
+   ],
+   "src_radius_px": 54.5,
+   "src_bg_gray_before_norm": 195,
+   "order_clockwise_from_top": 4
+  },
+  {
+   "file": "l05.png",
+   "name": "M mosaic emblem",
+   "source_frame_10fps": 219,
+   "source_time_s": 21.8,
+   "src_center_px": [
+    1028.2,
+    521.3
+   ],
+   "src_radius_px": 54.5,
+   "src_bg_gray_before_norm": 195,
+   "order_clockwise_from_top": 5
+  },
+  {
+   "file": "l06.png",
+   "name": "Show Me",
+   "source_frame_10fps": 223,
+   "source_time_s": 22.2,
+   "src_center_px": [
+    1000.0,
+    534.3
+   ],
+   "src_radius_px": 55.3,
+   "src_bg_gray_before_norm": 209,
+   "order_clockwise_from_top": 6
+  },
+  {
+   "file": "l07.png",
+   "name": "Horseka",
+   "source_frame_10fps": 221,
+   "source_time_s": 22.0,
+   "src_center_px": [
+    857.3,
+    647.3
+   ],
+   "src_radius_px": 57.0,
+   "src_bg_gray_before_norm": 241,
+   "order_clockwise_from_top": 7
+  },
+  {
+   "file": "l08.png",
+   "name": "The Game premium lounge",
+   "source_frame_10fps": 230,
+   "source_time_s": 22.9,
+   "src_center_px": [
+    847.3,
+    648.7
+   ],
+   "src_radius_px": 57.1,
+   "src_bg_gray_before_norm": 242,
+   "order_clockwise_from_top": 8
+  },
+  {
+   "file": "l09.png",
+   "name": "Zorge No9",
+   "source_frame_10fps": 236,
+   "source_time_s": 23.5,
+   "src_center_px": [
+    796.5,
+    614.5
+   ],
+   "src_radius_px": 57.4,
+   "src_bg_gray_before_norm": 246,
+   "order_clockwise_from_top": 9
+  },
+  {
+   "file": "l10.png",
+   "name": "Bolshevik",
+   "source_frame_10fps": 241,
+   "source_time_s": 24.0,
+   "src_center_px": [
+    754.0,
+    607.5
+   ],
+   "src_radius_px": 57.4,
+   "src_bg_gray_before_norm": 248,
+   "order_clockwise_from_top": 10
+  },
+  {
+   "file": "l11.png",
+   "name": "A101 Komfort",
+   "source_frame_10fps": 248,
+   "source_time_s": 24.7,
+   "src_center_px": [
+    705.4,
+    606.4
+   ],
+   "src_radius_px": 57.4,
+   "src_bg_gray_before_norm": 248,
+   "order_clockwise_from_top": 11
+  },
+  {
+   "file": "l12.png",
+   "name": "Whitewill",
+   "source_frame_10fps": 255,
+   "source_time_s": 25.4,
+   "src_center_px": [
+    711.7,
+    489.4
+   ],
+   "src_radius_px": 57.5,
+   "src_bg_gray_before_norm": 248,
+   "order_clockwise_from_top": 12
+  },
+  {
+   "file": "l13.png",
+   "name": "Kazakov Grand Loft",
+   "source_frame_10fps": 259,
+   "source_time_s": 25.8,
+   "src_center_px": [
+    692.8,
+    361.4
+   ],
+   "src_radius_px": 57.4,
+   "src_bg_gray_before_norm": 248,
+   "order_clockwise_from_top": 13
+  },
+  {
+   "file": "l14.png",
+   "name": "Naiman Residence",
+   "source_frame_10fps": 264,
+   "source_time_s": 26.3,
+   "src_center_px": [
+    750.8,
+    137.7
+   ],
+   "src_radius_px": 57.4,
+   "src_bg_gray_before_norm": 248,
+   "order_clockwise_from_top": 14
+  },
+  {
+   "file": "l15.png",
+   "name": "Little",
+   "source_frame_10fps": 268,
+   "source_time_s": 26.7,
+   "src_center_px": [
+    712.5,
+    126.0
+   ],
+   "src_radius_px": 57.4,
+   "src_bg_gray_before_norm": 248,
+   "order_clockwise_from_top": 15
+  },
+  {
+   "file": "l16.png",
+   "name": "Ingrad",
+   "source_frame_10fps": 273,
+   "source_time_s": 27.2,
+   "src_center_px": [
+    664.3,
+    64.9
+   ],
+   "src_radius_px": 57.4,
+   "src_bg_gray_before_norm": 245,
+   "order_clockwise_from_top": 16
+  },
+  {
+   "file": "l17.png",
+   "name": "ERA Developments",
+   "source_frame_10fps": 273,
+   "source_time_s": 27.2,
+   "src_center_px": [
+    523.5,
+    79.6
+   ],
+   "src_radius_px": 56.6,
+   "src_bg_gray_before_norm": 231,
+   "order_clockwise_from_top": 17
+  }
+ ]
+}

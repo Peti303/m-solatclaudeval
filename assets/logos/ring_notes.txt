@@ -1,0 +1,54 @@
+LOGO RING - measurements from the screen recording (video px, 1280x720, t in seconds)
+=====================================================================================
+
+Count: 17 distinct badges (not ~20). Verified by ellipse fit at t=23.5s: 17 centres evenly spaced
+at ~21.2 deg of ring parameter angle, no gaps/extra badges. Order clockwise (screen), starting at top:
+ 1 Coldy, 2 a.properties, 3 T5 monogram, 4 Khamovniki lion crest (shield looks like "12"/"17"),
+ 5 M mosaic emblem, 6 Show Me, 7 Horseka, 8 The Game, 9 Zorge No9, 10 Bolshevik, 11 A101,
+ 12 Whitewill, 13 Kazakov Grand Loft, 14 Naiman, 15 Little, 16 Ingrad, 17 ERA Developments, (back to 1).
+(Coldy is the one hidden behind "The" at the very top at t~22.5s.)
+
+Geometry (projected ring is an ellipse, axis-aligned, i.e. a circle tilted back in 3D; it is NOT a flat circle)
+- Reference fit at t=23.5s (frame 236, 17 badge centres, residual <5px):
+    centre ~ (651, 362) px, semi-axis x ~ 436 px, semi-axis y ~ 313 px.
+  Leftmost badge centre x~192, rightmost x~1084 (badge outer edges ~135..1141); bottom badge centre y~667 (frame is
+  clipped at y~712, bottom badges get cut off), top badge centre y~47.
+- Ring centre x ~ 645 = horizontal centre of the headline (headline text spans x 285..1005). Ring is concentric with the
+  headline block, ring centre about 50-80 px BELOW the headline's vertical middle; the ring is much wider than the headline
+  (rx 436 vs headline half-width ~360), so the left/right badges sit outside the text and the lower/upper arcs cross over
+  the text lines ("Work With Us" at the bottom, "The" at the top). Headline text is rendered ON TOP of the badges
+  (white letters visible over white discs).
+- Ellipse y-extent varies a bit over time (measured ry ~ 275 at t=21.5, ~313-330 at t=23.5-24.5): the tilt seems to
+  change slightly with scroll; fits at other times are rough (+-30 px).
+- Badge diameter depends on position (perspective): ~114 px (R~57) at the bottom arc (angles 120-230 deg),
+  ~102-104 px at left/right (R~51-52), ~88 px (R~44) at the top (angles 330-50 deg).
+  Rule of thumb: R(theta) ~ 50.5 + 6.5*cos(theta - 165 deg) with theta = clockwise angle from top.
+  (NOT 50-70 px: at 1280 wide they are 88-114 px diameter.)
+
+Motion while scrolling
+- The whole ring translates UP with the page scroll (same scroll as the headline): ring first appears from the bottom
+  edge at t~20.5 (only the top arc visible), ring centre y ~ 590 (t=21.0), ~475 (21.6), ~365 (22.5), ~340 (23.4),
+  ~300 (24.5), ~150-180 (25.2), ~50 (25.5), < 0 after t~26; last badges (Ingrad/ERA/Coldy/Little) leave the top at
+  t~27.5-28; footer ("Kononenko Architectural Bureau / Navigation...") then comes in (t~26.5-29). Scroll speed is not
+  constant: slow ~t=23.5-24.5, fast (>200 px/s) after t~25.
+- Simultaneously the ring ROTATES COUNTER-CLOCKWISE on screen: badges at the bottom slide left -> right (~15-17 px/frame
+  at 10fps = ~160 px/s, i.e. ~21 deg/s ~ one badge slot per second), on the right side they go up, along the top they
+  go right -> left, on the left they go down. Rotation looks steady (~0.37 rad/s) from t~21 to t~28.
+
+Brightness profile vs angle (theta = clockwise angle from top, badge background gray level, t=23.5s frame):
+   theta:   7 | 29-49 |  67 |  85 | 103 | 124 | 150-178 | 203 | 223 | 240 | 258 | 275 | 294 | 315-342
+   gray :  ~30-90? (top, partly occluded)  ~35-55 | ~94 | ~151 | ~200 | ~249 | ~246 | ~232 | ~201 | ~154 | ~97 | ~55 | ~32 | ~26-33
+  -> darkest (~25-35, almost invisible, tinted black) near the top (theta ~300-30 deg), nearly pure white (245-250) on the
+  bottom arc from theta ~120 to ~205 deg, smooth falloff both sides; slightly asymmetric: faster fall-off on the left side
+  (rising side on the right is slower). Approximation: gray ~ 140 + 115*cos(theta - 165deg), clipped to 255 (dim end ~25).
+  Brightness is a function of ring position only (each badge brightens as it rotates toward the bottom, dims when it passes
+  up the right side and top, left side dim as it goes up... (it is the position on the ring, not time).
+  Consequence: a.properties, T5, crest, M and Show Me crossed the bright zone before/while the ring was still below the
+  viewport, so their best visible frames are only gray ~140-210 (the crops are normalised to white by dividing by the
+  measured disc background, so those crops are slightly noisier/softer than the others).
+- Opacity effect appears to be a plain colour/opacity multiply of the whole badge (logo ink dims too), badge discs are
+  grey-on-black, there is no outline or shadow.
+
+Crop provenance: see manifest.json (source 10fps frame, centre, radius, original background gray before normalisation).
+Crops were taken inside radius R-2 px then Lanczos-resized to 160px, divided per channel by the disc-edge median so the
+background = 255, circular alpha mask (anti-aliased).
