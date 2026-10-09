@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kononenko Architectural Bureau</title>
+<meta name="description" content="Scroll-driven recreation of the KNKO architectural bureau site.">
+<link rel="preload" href="assets/fonts/inter-tight-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/newsreader-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="scroller" aria-hidden="true"></div>
+
+<div id="stage">
+  <div id="bg"></div>
+
+  <!-- 1. hero -->
+  <div id="hero">
+    <svg id="spokes" width="100%" height="100%" overflow="visible"></svg>
+    <div id="markers"></div>
+    <h1 class="mask-lines" id="hero-a"><span class="ml"><span>Refined &amp; Bold</span></span><span class="ml"><span>Essential</span></span></h1>
+    <h1 class="mask-lines" id="hero-b"><span class="ml"><span>Simplicity &amp; Clarity</span></span><span class="ml"><span>of Approach</span></span></h1>
+  </div>
+
+  <!-- 2. intro -->
+  <div id="intro" class="page-el">
+    <div class="intro-label">People &amp;<br>Process</div>
+    <p class="serif intro-text"><span class="ind"></span>A studio shaped by<br>clarity, trust, and a<br>collective pursuit of<br>thoughtful design.</p>
+  </div>
+
+  <!-- photo ring -->
+  <div id="cards"></div>
+
+  <!-- 3. foundation -->
+  <div id="found" class="page-el">
+    <h2 class="found-h"><span>2011 Year</span><span>of Foundation</span></h2>
+    <div class="found-p p-l">Design approach grounded in passive strategies,<br>material logic, and environmental responsibility.</div>
+    <div class="found-p p-r">Lifecycle-focused architecture with efficient systems,<br>sustainable choices, and long-term value.</div>
+  </div>
+
+  <!-- 4. stats -->
+  <div id="stats">
+    <div class="stat page-el"><div class="num">15+</div><div class="serif desc"><span class="ind"></span>Years of<br>experience</div></div>
+    <div class="stat page-el"><div class="num">490+</div><div class="serif desc"><span class="ind"></span>Completed<br>projects</div></div>
+    <div class="stat page-el"><div class="num">45+</div><div class="serif desc"><span class="ind"></span>Professionals<br>on the team</div></div>
+    <div class="stat page-el"><div class="num">40K</div><div class="serif desc"><span class="ind"></span>Total area<br>covered</div></div>
+  </div>
+
+  <!-- 5. brands -->
+  <div id="badges"></div>
+  <h2 id="brands" class="serif page-el">The<br>World’s Most<br>Ambitious<br>Brands<br>Choose to<br>Work With Us</h2>
+
+  <!-- 6. footer -->
+  <footer id="footer" class="page-el">
+    <div class="f-logo">Kononenko<br>Architectural<br><span class="serif">Bureau</span></div>
+    <div class="f-col" style="left:271px"><span class="serif lab">Navigation</span></div>
+    <div class="f-col f-vals" style="left:355px"><u>Index</u><br>About<br>Work<br>Team<br><br>Contact<br>Order desgin</div>
+    <div class="f-col" style="left:605px"><span class="serif lab">Media</span></div>
+    <div class="f-col f-vals" style="left:689px">Behance<br>Pinterest<br>Telegram<br>WhatsApp<br><br>Phone<br>Email<br>Channel</div>
+    <div class="f-col" style="left:857px"><span class="serif lab">Address</span></div>
+    <div class="f-col f-vals" style="left:940px">Via Giacomo Leopardi<br>14, 20123, Milano<br>Italia<br><br>Keizersgracht 421,<br>1016, Amsterdam<br>Netherlands</div>
+    <div class="f-col" style="left:1107px"><span class="serif lab">Hours</span></div>
+    <div class="f-col f-vals" style="left:1191px">Mon to Fri<br><i>10:00 AM</i><br><i>7:00 PM</i><br><br>Sat to Sun<br><i>12:00 PM</i><br><i>5:00 PM</i></div>
+
+    <div id="knko" aria-label="KNKO"><span>K</span><span>N</span><span>K</span><span>O</span></div>
+
+    <div class="f-bottom serif">
+      <span style="left:20px">All rights reserved</span>
+      <span style="left:271px">License Number</span><span style="left:362px">IT-AR-2023-15847</span><span style="left:457px">NL-BA-08576321</span>
+      <span style="left:605px">Visual Design</span><span style="left:688px">Artem Shcherban</span>
+      <span style="left:857px">Development</span><span style="left:941px">Reksa Andhika</span>
+      <span style="left:1107px">Legal documents</span><span style="left:1228px">© 2026</span>
+    </div>
+  </footer>
+
+  <!-- fixed header -->
+  <header id="header">
+    <a class="logo" href="#">Kononenko<br>Architectural<br><span class="serif">Bureau</span></a>
+    <nav><a class="on" href="#">Index</a>, <a href="#">Work</a>, <a href="#">About</a>, <a href="#">Contact</a></nav>
+  </header>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
