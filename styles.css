@@ -1,0 +1,87 @@
+@font-face{font-family:"Inter Tight";font-weight:300;src:url(assets/fonts/inter-tight-latin-300-normal.woff2) format("woff2");font-display:swap}
+@font-face{font-family:"Inter Tight";font-weight:400;src:url(assets/fonts/inter-tight-latin-400-normal.woff2) format("woff2");font-display:swap}
+@font-face{font-family:"Newsreader";font-weight:400;src:url(assets/fonts/newsreader-latin-400-normal.woff2) format("woff2");font-display:swap}
+@font-face{font-family:"Newsreader";font-weight:500;src:url(assets/fonts/newsreader-latin-500-normal.woff2) format("woff2");font-display:swap}
+
+:root{
+  --sans:"Inter Tight","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --serif:"Newsreader","Times New Roman",serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#000;overscroll-behavior:none}
+body{font-family:var(--sans);color:#fff;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.serif{font-family:var(--serif);font-weight:400;letter-spacing:-.025em}
+
+#scroller{width:1px;pointer-events:none;visibility:hidden}
+
+/* fixed stage, authored at 1280 CSS px wide and scaled to the viewport */
+#stage{position:fixed;left:0;top:0;overflow:hidden;transform-origin:0 0;background:#000;
+  --ink:#000;--hc:352;--cx:640}
+#stage>*{position:absolute}
+#bg{left:0;top:0;width:100%;height:100%;background:#fdfdfd}
+
+.page-el{left:0;top:0;width:100%;will-change:transform}
+
+/* ---------- header ---------- */
+#header{left:0;top:0;width:100%;height:60px;z-index:50;color:#fff;mix-blend-mode:difference;pointer-events:none;font-size:12.5px;line-height:12.5px}
+#header .logo{position:absolute;left:20px;top:11px;font-size:13px;line-height:12.5px;letter-spacing:-.005em;pointer-events:auto;transition:opacity .35s}
+#header .logo .serif{font-size:14px;letter-spacing:-.01em}
+#header nav{position:absolute;right:18px;top:12px;white-space:pre;pointer-events:auto;transition:transform .5s cubic-bezier(.7,0,.2,1)}
+#header nav a.on{text-decoration:underline;text-underline-offset:2px;text-decoration-thickness:1px}
+body.at-end #header nav{transform:translateY(-130%)}
+body.at-end #header .logo{opacity:0}
+
+/* ---------- hero ---------- */
+#hero{left:0;top:0;width:100%;height:100%;will-change:transform}
+#spokes{position:absolute;left:0;top:0}
+#markers span{position:absolute;left:0;top:0;font-size:10px;line-height:10px;color:var(--ink);white-space:nowrap;margin:-5px 0 0 -7px}
+#hero h1{position:absolute;left:0;width:100%;text-align:center;font-weight:400;font-size:50px;line-height:48px;letter-spacing:.005em;color:var(--ink);top:calc(var(--hc) * 1px - 22px)}
+#hero h1 .ml{display:block;height:48px;overflow:hidden}
+#hero h1 .ml>span{display:block;will-change:transform}
+
+/* ---------- intro ---------- */
+#intro{height:0;color:#fff}
+.intro-label{position:absolute;left:20px;top:2px;font-size:11px;line-height:12.5px;color:#f2f2f2;letter-spacing:0}
+.intro-text{position:absolute;left:20px;top:0;font-size:80px;line-height:71px;white-space:nowrap;letter-spacing:.008em}
+.ind{display:inline-block;width:83px}
+
+/* ---------- cards ---------- */
+#cards{left:0;top:0;width:100%;height:100%;pointer-events:none}
+.card{position:absolute;left:0;top:0;width:252px;height:252px;margin:-126px 0 0 -126px;background:#111;will-change:transform;backface-visibility:hidden}
+.card img{display:block;width:100%;height:100%;object-fit:cover}
+
+/* ---------- foundation ---------- */
+#found{height:0}
+.found-h{position:absolute;left:0;top:0;width:100%;text-align:center;font-weight:400;font-size:111px;line-height:100px;letter-spacing:-.008em;color:#fff}
+.found-h span{display:block}
+.found-p{position:absolute;top:244px;width:300px;margin-left:-150px;text-align:center;font-size:11px;line-height:13px;color:rgba(255,255,255,.5);letter-spacing:-.005em;white-space:nowrap}
+.p-l{left:calc(var(--cx) * 1px - 145px)}
+.p-r{left:calc(var(--cx) * 1px + 146px)}
+
+/* ---------- stats ---------- */
+.stat{position:absolute;height:0}
+.stat .num{position:absolute;left:690px;top:0;font-size:118px;line-height:100px;letter-spacing:-.045em;white-space:nowrap}
+.stat .desc{position:absolute;left:690px;top:112px;font-size:80px;line-height:75px;white-space:nowrap;letter-spacing:-.035em}
+.stat .desc .ind{width:88px}
+.stat .num{color:var(--a-num,#363636)}
+.stat .desc{color:var(--a-desc,#2d2d2d)}
+
+/* ---------- brands ---------- */
+#badges{left:0;top:0;width:100%;height:100%;pointer-events:none}
+.badge{position:absolute;left:0;top:0;width:114px;height:114px;margin:-57px 0 0 -57px;border-radius:50%;overflow:hidden;background:#fff;will-change:transform,filter}
+.badge img{display:block;width:100%;height:100%}
+#brands{position:absolute;text-align:center;font-size:127px;line-height:95.2px;letter-spacing:-.025em;color:#fff;z-index:5}
+
+/* ---------- footer ---------- */
+#footer{height:0;font-size:12px;line-height:12.7px}
+#footer .f-logo{position:absolute;left:20px;top:11px;font-size:13px;line-height:12.5px;opacity:0;transition:opacity .35s}
+body.at-end #footer .f-logo{opacity:1}
+#footer .f-col{position:absolute;top:0px;white-space:nowrap}
+#footer .f-vals{font-family:var(--sans)}
+#footer .f-vals i{font-style:normal;color:#808080}
+#footer .lab{color:#fff}
+#footer .f-vals u{text-underline-offset:2px;text-decoration-thickness:1px}
+#knko{position:absolute;left:20px;top:0;display:flex;font-weight:400;letter-spacing:-.045em;line-height:1;white-space:nowrap}
+#knko span{display:block;will-change:transform}
+.f-bottom span{position:absolute;top:683px;white-space:nowrap;color:#808080;font-size:11.5px}

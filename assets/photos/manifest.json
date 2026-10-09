@@ -1,0 +1,260 @@
+{
+ "note": "Cards are square (1:1). Order = clockwise from top of ring at t~9.5s (frame t0096).",
+ "photos": [
+  {
+   "file": "p01.jpg",
+   "ring_order_clockwise_from_top": 1,
+   "description": "street / brick building entrance, people with backpacks",
+   "width": 290,
+   "height": 290,
+   "native_card_px_in_source": 145,
+   "source_frame": "f10/t0083.png",
+   "source_time_s": 8.2,
+   "card_center_px": [
+    698,
+    175
+   ],
+   "internal_cluster": 7
+  },
+  {
+   "file": "p02.jpg",
+   "ring_order_clockwise_from_top": 2,
+   "description": "colour swatch fan + black folder on table",
+   "width": 306,
+   "height": 306,
+   "native_card_px_in_source": 153,
+   "source_frame": "f10/t0082.png",
+   "source_time_s": 8.1,
+   "card_center_px": [
+    761,
+    236
+   ],
+   "internal_cluster": 5
+  },
+  {
+   "file": "p03.jpg",
+   "ring_order_clockwise_from_top": 3,
+   "description": "man sitting on floor laughing (bookshelf)",
+   "width": 406,
+   "height": 406,
+   "native_card_px_in_source": 203,
+   "source_frame": "f10/t0078.png",
+   "source_time_s": 7.7,
+   "card_center_px": [
+    276,
+    233
+   ],
+   "internal_cluster": 3
+  },
+  {
+   "file": "p04.jpg",
+   "ring_order_clockwise_from_top": 4,
+   "description": "women at table with plans, lamp & monitor (dark wall)",
+   "width": 508,
+   "height": 508,
+   "native_card_px_in_source": 254,
+   "source_frame": "f10/t0068.png",
+   "source_time_s": 6.7,
+   "card_center_px": [
+    212,
+    449
+   ],
+   "internal_cluster": 2
+  },
+  {
+   "file": "p05.jpg",
+   "ring_order_clockwise_from_top": 5,
+   "description": "women around table with drawings in white office (yellow sofa)",
+   "width": 510,
+   "height": 510,
+   "native_card_px_in_source": 255,
+   "source_frame": "f10/t0064.png",
+   "source_time_s": 6.3,
+   "card_center_px": [
+    643,
+    489
+   ],
+   "internal_cluster": 1
+  },
+  {
+   "file": "p06.jpg",
+   "ring_order_clockwise_from_top": 6,
+   "description": "orange-lit doorway, girls in white dress / denim",
+   "width": 512,
+   "height": 512,
+   "native_card_px_in_source": 256,
+   "source_frame": "f10/t0061.png",
+   "source_time_s": 6.0,
+   "card_center_px": [
+    1034,
+    404
+   ],
+   "internal_cluster": 0
+  },
+  {
+   "file": "p07.jpg",
+   "ring_order_clockwise_from_top": 7,
+   "description": "blonde woman in glasses, white T-shirt at desk",
+   "width": 270,
+   "height": 270,
+   "native_card_px_in_source": 135,
+   "source_frame": "f10/t0104.png",
+   "source_time_s": 10.3,
+   "card_center_px": [
+    1141,
+    436
+   ],
+   "internal_cluster": 10
+  },
+  {
+   "file": "p08.jpg",
+   "ring_order_clockwise_from_top": 8,
+   "description": "hand holding polaroid",
+   "width": 272,
+   "height": 272,
+   "native_card_px_in_source": 136,
+   "source_frame": "f10/t0106.png",
+   "source_time_s": 10.5,
+   "card_center_px": [
+    1072,
+    520
+   ],
+   "internal_cluster": 12
+  },
+  {
+   "file": "p09.jpg",
+   "ring_order_clockwise_from_top": 9,
+   "description": "two women looking at large paper",
+   "width": 270,
+   "height": 270,
+   "native_card_px_in_source": 135,
+   "source_frame": "f10/t0128.png",
+   "source_time_s": 12.7,
+   "card_center_px": [
+    682,
+    180
+   ],
+   "internal_cluster": 15
+  },
+  {
+   "file": "p10.jpg",
+   "ring_order_clockwise_from_top": 10,
+   "description": "hands browsing magazine / catalogue",
+   "width": 270,
+   "height": 270,
+   "native_card_px_in_source": 135,
+   "source_frame": "f10/t0126.png",
+   "source_time_s": 12.5,
+   "card_center_px": [
+    602,
+    220
+   ],
+   "internal_cluster": 14
+  },
+  {
+   "file": "p11.jpg",
+   "ring_order_clockwise_from_top": 11,
+   "description": "brick facade with green foliage",
+   "width": 264,
+   "height": 264,
+   "native_card_px_in_source": 132,
+   "source_frame": "f10/t0157.png",
+   "source_time_s": 15.6,
+   "card_center_px": [
+    538,
+    555
+   ],
+   "internal_cluster": 16
+  },
+  {
+   "file": "p12.jpg",
+   "ring_order_clockwise_from_top": 12,
+   "description": "dark-haired woman at desk, shelves",
+   "width": 350,
+   "height": 350,
+   "native_card_px_in_source": 175,
+   "source_frame": "f10/t0080.png",
+   "source_time_s": 7.9,
+   "card_center_px": [
+    787,
+    133
+   ],
+   "internal_cluster": 4
+  },
+  {
+   "file": "p13.jpg",
+   "ring_order_clockwise_from_top": 13,
+   "description": "woman at computer desk, grey sweater",
+   "width": 294,
+   "height": 294,
+   "native_card_px_in_source": 147,
+   "source_frame": "f10/t0082.png",
+   "source_time_s": 8.1,
+   "card_center_px": [
+    323,
+    443
+   ],
+   "internal_cluster": 6
+  },
+  {
+   "file": "p14.jpg",
+   "ring_order_clockwise_from_top": 14,
+   "description": "hands over notebook with floor-plan sketches",
+   "width": 284,
+   "height": 284,
+   "native_card_px_in_source": 142,
+   "source_frame": "f10/t0083.png",
+   "source_time_s": 8.2,
+   "card_center_px": [
+    292,
+    358
+   ],
+   "internal_cluster": 8
+  },
+  {
+   "file": "p15.jpg",
+   "ring_order_clockwise_from_top": 15,
+   "description": "women at table, lamp, drawings (dark wall)",
+   "width": 272,
+   "height": 272,
+   "native_card_px_in_source": 136,
+   "source_frame": "f10/t0090.png",
+   "source_time_s": 8.9,
+   "card_center_px": [
+    249,
+    327
+   ],
+   "internal_cluster": 13
+  },
+  {
+   "file": "p16.jpg",
+   "ring_order_clockwise_from_top": 16,
+   "description": "black notebook on floor-plan drawing",
+   "width": 272,
+   "height": 272,
+   "native_card_px_in_source": 136,
+   "source_frame": "f10/t0085.png",
+   "source_time_s": 8.4,
+   "card_center_px": [
+    430,
+    258
+   ],
+   "internal_cluster": 11
+  },
+  {
+   "file": "p17.jpg",
+   "ring_order_clockwise_from_top": 17,
+   "description": "girl with backpack at wooden wall",
+   "width": 276,
+   "height": 276,
+   "native_card_px_in_source": 138,
+   "source_frame": "f10/t0084.png",
+   "source_time_s": 8.3,
+   "card_center_px": [
+    592,
+    195
+   ],
+   "internal_cluster": 9
+  }
+ ]
+}
