@@ -75,7 +75,8 @@ body.at-end #header .logo{opacity:0}
 
 /* ---------- footer ---------- */
 #footer{height:0;font-size:12px;line-height:12.7px}
-#footer .f-logo{position:absolute;left:20px;top:11px;font-size:13px;line-height:12.5px}
+#footer .f-logo{position:absolute;left:20px;top:11px;font-size:13px;line-height:12.5px;opacity:0;transition:opacity .35s}
+body.at-end #footer .f-logo{opacity:1}
 #footer .f-col{position:absolute;top:0px;white-space:nowrap}
 #footer .f-vals{font-family:var(--sans)}
 #footer .f-vals i{font-style:normal;color:#808080}

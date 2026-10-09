@@ -40,7 +40,7 @@ const TS = [
   [3.0, 0], [3.2, 20], [3.9, 60], [4.2, 175], [4.4, 328], [5.0, 434], [5.6, 586], [6.0, 700], [6.4, 815], [7.3, 1055], [7.9, 1212], [8.5, 1224],
   [8.7, 1245], [9.5, 1438], [10.5, 1772], [11.1, 1848], [11.9, 2132], [13.0, 2415], [14.6, 2790],
   [17.0, 3205], [19.8, 3860], [21.1, 4231], [22.1, 4490], [23.3, 4496], [23.5, 4570], [25.9, 4872],
-  [26.1, 4939], [27.7, 5360], [28.3, 5396]
+  [26.1, 4939], [26.3, 5026], [26.5, 5047], [26.9, 5053], [27.1, 5091], [27.3, 5174], [27.5, 5261], [27.7, 5366], [27.9, 5389], [28.1, 5395], [28.3, 5396]
 ];
 const S_OF_T = t => pw(TS, t);
 const TS_INV = TS.map(([t, s]) => [s, t]);
@@ -152,11 +152,12 @@ if (document.fonts && document.fonts.ready) document.fonts.ready.then(resize);
 const q = new URLSearchParams(location.search);
 let S = 0, Sf = 0, Ss = 0, u = 0, last = performance.now(), prevSf = 0, vel = 0;
 const act = [0, 0, 0, 0];
+const lagS = [0, 0, 0, 0];
 const getS = () => scrollY / k;
 
 function snapTo(s, uo) {
   scrollTo(0, s * k);
-  S = Sf = Ss = prevSf = s; vel = 0;
+  S = Sf = Ss = prevSf = s; vel = 0; lagS.fill(s);
   u = uo !== undefined ? uo : (s > 25 ? clamp(T_OF_S(s) - 3.2 + 0.15, 0, 1.7) : 0);
   act.fill(0);
   statsActive(Sf, true);
@@ -331,7 +332,10 @@ function frame(dt) {
   placeBadges();
 
   // KNKO: per-letter lag while scrolling
-  knkoLetters.forEach((l, i) => { l.style.transform = `translate3d(0,${(clamp(vel * (0.065 + 0.02 * i), -140, 140)).toFixed(1)}px,0)`; });
+  knkoLetters.forEach((l, i) => {
+    lagS[i] += (Sf - lagS[i]) * (1 - Math.exp(-dt / (0.3 + 0.1 * i)));
+    l.style.transform = `translate3d(0,${clamp(Sf - lagS[i], -320, 320).toFixed(1)}px,0)`;
+  });
 
   document.body.classList.toggle('at-end', Sf > 5330);
 }
@@ -355,7 +359,7 @@ function tick(now) {
 }
 
 if (q.has('s')) snapTo(parseFloat(q.get('s')));
-else { S = Sf = Ss = getS(); u = S > 25 ? 1.7 : 0; }
+else { S = Sf = Ss = getS(); lagS.fill(S); u = S > 25 ? 1.7 : 0; }
 if (!q.has('freeze')) requestAnimationFrame(t => { last = t; tick(t); });
 else frame(0);
 })();
