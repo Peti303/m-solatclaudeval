@@ -1,0 +1,31 @@
+RING GEOMETRY (measured from f10 frames t0090..t0125, ring stable phase, t = 8.9..12.4 s)
+
+- Cards are SQUARE (1:1), not 4:5. Each card is a flat rotated square, 135 x 135 px at the 1280x720 viewport
+  (area-fit residual < 1 px). In the zoomed-in entry phase (t0058-t0075, video 5.7-7.4 s) the same cards are 255 x 255 px
+  (scale 1.89x) and are slightly trapezoidal (perspective) there; at t0078-t0085 they shrink 203 -> 135 px.
+- Card centres lie on a perfect circle (fit residual <= 1 px over 7-8 cards per frame):
+    radius R = 537 px, centre x = 640 (viewport centre), centre y = 535 px at t0096 (t = 9.5 s).
+  The ring centre scrolls upward with the page:  cy = 765 (t0086), 694 (t0090), 535 (t0096), 389 (t0100),
+  241 (t0104), 194 (t0108), 146 (t0111), 18 (t0115), -154 (t0120), -293 (t0125); (x and R constant) -> cy roughly
+  decreases ~26-37 px/frame (260-370 px/s) while the ring is in view. At t0096 the ring spans y=-2 .. 1072 so only the
+  upper ~2/3 of it is visible; the "2011 Year of Foundation" text is centred at about (640, 500).
+- 17 cards evenly spaced: 360/17 = 21.18 deg between neighbours (chord ~ 200 px, i.e. ~65 px gap between 135 px cards).
+- The ring also spins: card angle psi (math angle, ccw, 0 = +x/right, measured from ring centre) increases by about
+  1.8 deg per frame (~18 deg/s counter-clockwise on screen). At t0096 the card for p17 (wood wall) sits at psi = 105.3 deg;
+  p01 (street) at 84.1 deg (first card clockwise from top), p02 at 62.9, p03 at 41.7, ...  i.e. card k (k=1..17):
+  psi_k(t0096) = 84.1 - 21.18*(k-1)   (mod 360).  psi_k(t) = psi_k(t0096) + 1.8*(frame - 96) approx.
+- Card rotation: card TOP points radially OUTWARD from the ring centre. With rot_ccw = rotation of the card (CCW positive
+  on screen) :  rot_ccw = psi - 90 deg   (CSS: transform: rotate(-(psi-90)deg) = rotate((90-psi)deg), i.e. clockwise-positive
+  angle = 90 - psi).  Checks: top of ring (psi=90) -> upright; right (psi=0) -> turned 90 deg clockwise (top points right);
+  bottom (psi=-90) -> upside-down; left (psi=180) -> 90 deg CCW (top points left).
+  (cv2.minAreaRect angles match: cv2_angle = -(psi - 90) mod 90.)
+- Implementation recipe: element at left = cx + R*cos(psi), top = cy - R*sin(psi) (card centre), size 135, then
+  rotate(90 - psi) degrees (CSS, cw positive), transform-origin centre.
+- Entry phase (t0046-t0077, 4.5-7.7 s): the ring is zoomed ~1.9x (cards 255 px) and appears as an arc entering from
+  bottom-right moving up-left; cards there are upright at the left end of the visible arc, tilted up to ~30 deg
+  counter-clockwise (top edge rising to the right) toward the right end; spacing ~290-300 px between neighbours.
+  It zooms out to the 135 px / R=537 state by about t0086 (8.5 s). Order of appearance in the entry phase
+  (left to right = first to last seen): man(p03), lamp women(p04), sofa women(p05), orange girls(p06), glasses woman(p07),
+  then polaroid/two women etc. as the ring rotates in (this order is clockwise on the ring... see manifest).
+- Final phase (t0130-t0200, 13-20 s): same ring (cards still 135 px, R=537) keeps scrolling up/left; only an arc on the
+  left/upper-left stays visible next to the stats text.
